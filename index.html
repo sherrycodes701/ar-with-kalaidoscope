@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monument AR Viewer</title>
 
-    <script 
-        type="module" 
-        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-    </script>
-    
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     <style>
         /* Optional: Set the size for the 3D viewer on the page */
         model-viewer {
@@ -32,13 +28,7 @@
     </style>
 </head>
 <body>
-
-    <model-viewer
-        src="./charminar.glb"                    ios-src="./charminar.usdz"               alt="A 3D model of a monument"           ar                                      ar-modes="webxr scene-viewer quick-look"ar-placement="floor"                    camera-controls                         auto-rotate                             shadow-intensity="1"                    >
-        <button slot="ar-button" id="ar-button">
-            View Monument in Your Space 🤳
-        </button>
-    </model-viewer>
+<model-viewer alt="Charminar" src="charminar.glb" ar shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
 
 </body>
 </html>
